@@ -1,0 +1,21 @@
+body{
+  min-width: 430px;
+}
+
+.fancy-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #212529;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.fancy-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.1);
+}
+
+
