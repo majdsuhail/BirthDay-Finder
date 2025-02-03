@@ -221,23 +221,28 @@ function MyTable({data}){
 
 
 
-function fetchData(setData){
+function fetchData(setData, loading, setLoading){
+  
   // Fetch data from Flask server using Axios
+  setLoading(true);
   axios.get('https://majdsuhail2.pythonanywhere.com/index')  
   .then(response => {
     setData(response.data);
+    setLoading(false);
   })
   .catch(error => {
     console.error('Error fetching data:', error);
+    setLoading(false);
   });
 }
 
 export default function MyApp() {
   
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetchData(setData)
+    fetchData(setData, loading, setLoading)
   }, []);
  
 
@@ -245,8 +250,12 @@ export default function MyApp() {
     <div>
       <CreateBtn setData={setData}/>
       <Search setData={setData}/>
-      <MyTable data={data}/>
-      
-    </div>
+      {loading ? (
+      <div className="spinner-container">
+        <div className="spinner"></div>
+      </div>
+    ) : (
+      <MyTable data={data} />
+    )}    </div>
   );
 }
