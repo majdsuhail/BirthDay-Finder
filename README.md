@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to the Birthday Finder web app! This application helps you find people who share the same birthdate as yours. Whether you're curious about who else was born on the same day or looking to connect with others who share your special day, this app has got you covered.
+BirthDay-Finder helps you find people who share the same birthdate as yours. Whether you're curious about who else was born on the same day or looking to connect with others who share your special day, this app has got you covered.
 
 ### Demo
 
@@ -31,11 +31,3 @@ The Birthday Finder web app is deployed on GitHub Pages for the frontend and Pyt
 
 - Frontend Deployment: [GitHub Pages](https://majdsuhail.github.io/BirthDay-Finder/)
 - Backend Deployment: PythonAnywhere
-
-## License
-
-This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code.
-
----
-
-Thank you for using the Birthday Finder web app! If you have any questions or feedback, don't hesitate to reach out. Happy searching! 🎉
